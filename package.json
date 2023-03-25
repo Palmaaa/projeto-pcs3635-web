@@ -9,7 +9,6 @@
         "test:watch": "jest --watch",
         "storybook": "start-storybook -p 6006",
         "lint": "eslint src --max-warnings=0",
-        "prepare": "husky install",
         "build-storybook": "build-storybook"
     },
     "lint-staged": {
