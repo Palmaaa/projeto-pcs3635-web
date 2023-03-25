@@ -1,4 +1,5 @@
 import Option from 'components/Option';
+
 import * as S from './styles';
 
 const HomeTemplate = () => (
