@@ -1,4 +1,3 @@
-import { useSubscription } from 'mqtt-react-hooks';
 import { NextPage } from 'next';
 
 const Ganhou: NextPage = () => {
