@@ -9,5 +9,5 @@ module.exports = {
 
         return config;
     },
-    pageExtensions: ['.tsx']
+    pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js']
 };
