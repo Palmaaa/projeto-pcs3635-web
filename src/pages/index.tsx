@@ -3,17 +3,19 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import HomeTemplate from 'template/Home';
 
+type IMapper = keyof typeof bitsToRoute;
+
 const bitsToRoute = {
-    '1000': '/aprendizado',
-    '0100': '/facil',
-    '0010': '/normal',
-    '0001': '/velocidade'
+    '1000': '/aprendizado/0',
+    '0100': '/facil/0',
+    '0010': '/normal/0',
+    '0001': '/velocidade/0'
 };
 
 const Home: NextPage = () => {
     const { push } = useRouter();
     const { connectionStatus } = useMqttState();
-    const { message: menu } = useSubscription('/menu');
+    const { message: menu } = useSubscription('menu');
 
     console.log(connectionStatus);
 
@@ -25,7 +27,7 @@ const Home: NextPage = () => {
         menu.message &&
         Object.keys(bitsToRoute).includes(menu.message.toString())
     ) {
-        push(bitsToRoute[menu.message as keyof typeof bitsToRoute]);
+        push(bitsToRoute[menu.message as IMapper]);
     }
 
     return null;

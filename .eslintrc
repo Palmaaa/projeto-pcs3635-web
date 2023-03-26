@@ -49,6 +49,7 @@
         ],
         "no-plusplus": "off",
         "no-unused-expressions": "off",
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "no-console": "off"
     }
 }
