@@ -5,6 +5,7 @@ import { useSubscription } from 'mqtt-react-hooks';
 import { useTimer } from 'react-timer-hook';
 
 import GameTemplate from 'template/Game';
+import NoSSR from 'components/NoSSR';
 
 const Aprendizado: NextPage = () => {
     const router = useRouter();
@@ -41,7 +42,11 @@ const Aprendizado: NextPage = () => {
         router.push('/ganhou');
     }
 
-    return <GameTemplate id={String(id)} seconds={seconds} />;
+    return (
+        <NoSSR>
+            <GameTemplate id={String(id)} seconds={seconds} />
+        </NoSSR>
+    );
 };
 
 export default Aprendizado;

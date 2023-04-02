@@ -1,10 +1,10 @@
+import { useEffect } from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useSubscription } from 'mqtt-react-hooks';
 import { useTimer } from 'react-timer-hook';
 
-import { useEffect } from 'react';
-
+import NoSSR from 'components/NoSSR';
 import GameTemplate from 'template/Game';
 
 const Normal: NextPage = () => {
@@ -42,7 +42,11 @@ const Normal: NextPage = () => {
         router.push('/ganhou');
     }
 
-    return <GameTemplate id={String(id)} seconds={seconds} />;
+    return (
+        <NoSSR>
+            <GameTemplate id={String(id)} seconds={seconds} />
+        </NoSSR>
+    );
 };
 
 export default Normal;
