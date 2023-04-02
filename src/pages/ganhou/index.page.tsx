@@ -22,7 +22,7 @@ const Ganhou: NextPage = () => {
             <p>
                 Prêmio final: R$ 2<sup>10</sup> mil = 1.024 mil
             </p>
-            <span>voltando ao menu em {seconds} s</span>
+            <span>voltando ao menu em {seconds || 60} s</span>
         </S.Container>
     );
 };

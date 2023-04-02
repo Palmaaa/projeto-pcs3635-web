@@ -33,7 +33,7 @@ const Perdeu: NextPage = () => {
                     <>R$ {p}</>
                 )}{' '}
             </p>
-            <span>voltando ao menu em {seconds} s</span>
+            <span>voltando ao menu em {seconds || 60} s</span>
         </S.Container>
     );
 };
