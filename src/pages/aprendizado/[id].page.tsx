@@ -1,15 +1,10 @@
+import { useEffect } from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useSubscription } from 'mqtt-react-hooks';
 import { useTimer } from 'react-timer-hook';
 
-import { QuestionSet } from 'components/QuestionSet';
-
-import { questions } from 'utils/questions';
-
-import { useEffect } from 'react';
-
-import * as S from './styles';
+import GameTemplate from 'template/Game';
 
 const Aprendizado: NextPage = () => {
     const router = useRouter();
@@ -39,34 +34,14 @@ const Aprendizado: NextPage = () => {
     }, [acertou]);
 
     if (perdeu?.message === '1') {
-        router.push('/perdeu');
+        router.push(`/perdeu?p=${id}`);
     }
 
     if (ganhou?.message === '1') {
         router.push('/ganhou');
     }
 
-    return (
-        <S.Container>
-            <h1>SHOW DO 2¹⁰ MIL</h1>
-            <S.Content>
-                {id && <QuestionSet question={questions[Number(id)]} />}
-                <S.Side>
-                    <p>
-                        Prêmio atual: R${' '}
-                        {Number(id) > 0 ? (
-                            <>
-                                2<sup>{id}</sup> mil
-                            </>
-                        ) : (
-                            id
-                        )}
-                    </p>
-                    <p>Tempo: {seconds} s</p>
-                </S.Side>
-            </S.Content>
-        </S.Container>
-    );
+    return <GameTemplate id={String(id)} seconds={seconds} />;
 };
 
 export default Aprendizado;

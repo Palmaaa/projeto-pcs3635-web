@@ -1,52 +1,52 @@
 export const questions = [
     {
-        number: '1',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Qual o menor país do mundo em área territorial?',
+        options: ['Mônaco', 'Vaticano', 'Nauru', 'San Marino']
     },
     {
-        number: '2',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Qual o maior planeta do sistema solar?',
+        options: ['Terra', 'Júpiter', 'Marte', 'Saturno']
     },
     {
-        number: '3',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Qual a capital da Austrália?',
+        options: ['Melbourne', 'Brisbane', 'Sydney', 'Canberra']
     },
     {
-        number: '4',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Qual o país com a maior população do mundo?',
+        options: ['Índia', 'Estados Unidos', 'China', 'Rússia']
     },
     {
-        number: '5',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Em que ano ocorreu a queda do Muro de Berlim?',
+        options: ['1985', '1987', '1989', '1991']
     },
     {
-        number: '6',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Qual a moeda oficial do Japão?',
+        options: ['Iene', 'Yuan', 'Won', 'Rúpia']
     },
     {
-        number: '7',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Qual o país que tem o maior número de Patrimônios Mundiais da UNESCO?',
+        options: ['China', 'Itália', 'Espanha', 'França']
     },
     {
-        number: '8',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Quem é considerado o maior cientista da história?',
+        options: [
+            'Albert Einstein',
+            'Isaac Newton',
+            'Galileu Galilei',
+            'Charles Darwin'
+        ]
     },
     {
-        number: '9',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        text: 'Qual o país com maior número de ilhas no mundo?',
+        options: [
+            'Indonésia',
+            'Pastor Alemão',
+            'Fila Brasileiro',
+            'São Bernardo'
+        ]
     },
     {
-        number: '10',
-        text: 'Qual a raça de cachorro que foi treinada para resgate nos Alpes Suíços?',
+        text: '',
         options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
     }
 ];

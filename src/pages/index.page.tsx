@@ -6,10 +6,10 @@ import HomeTemplate from 'template/Home';
 type IMapper = keyof typeof bitsToRoute;
 
 const bitsToRoute = {
-    '1000': '/aprendizado/0',
-    '0100': '/facil/0',
-    '0010': '/normal/0',
-    '0001': '/velocidade/0'
+    '11': '/aprendizado/0',
+    '10': '/facil/0',
+    '01': '/normal/0',
+    '00': '/velocidade/0'
 };
 
 const Home: NextPage = () => {

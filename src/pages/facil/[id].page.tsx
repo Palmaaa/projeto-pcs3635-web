@@ -1,9 +1,8 @@
+import { useEffect } from 'react';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { useSubscription } from 'mqtt-react-hooks';
 import { useTimer } from 'react-timer-hook';
-
-import { useEffect } from 'react';
 
 import GameTemplate from 'template/Game';
 
@@ -26,7 +25,7 @@ const Normal: NextPage = () => {
 
     useEffect(() => {
         if (acertou?.message === '1' && Number(id) < 9) {
-            router.push(`/normal/${Number(id) + 1}`);
+            router.push(`/facil/${Number(id) + 1}`);
             const t = new Date();
             t.setSeconds(t.getSeconds() + 20);
             restart(t);
