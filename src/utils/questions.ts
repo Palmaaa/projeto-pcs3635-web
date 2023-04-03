@@ -1,52 +1,148 @@
-export const questions = [
+export interface IQuestion {
+    question: string;
+    answers: {
+        a: string;
+        b: string;
+        c: string;
+        d: string;
+    };
+    correctAnswer: string;
+}
+
+export const questions: IQuestion[] = [
     {
-        text: 'Qual o menor país do mundo em área territorial?',
-        options: ['Mônaco', 'Vaticano', 'Nauru', 'San Marino']
+        question: 'Qual é o nome do maior rio do mundo em volume de água?',
+        answers: {
+            a: 'Rio Amazonas',
+            b: 'Rio Nilo',
+            c: 'Rio Yangtze',
+            d: 'Rio Mississippi'
+        },
+        correctAnswer: 'a'
     },
     {
-        text: 'Qual o maior planeta do sistema solar?',
-        options: ['Terra', 'Júpiter', 'Marte', 'Saturno']
+        question: 'Qual o maior país do mundo em área territorial?',
+        answers: {
+            a: 'Estados Unidos',
+            b: 'Rússia',
+            c: 'Brasil',
+            d: 'China'
+        },
+        correctAnswer: 'b'
     },
     {
-        text: 'Qual a capital da Austrália?',
-        options: ['Melbourne', 'Brisbane', 'Sydney', 'Canberra']
+        question: 'Qual é a capital do Chile?',
+        answers: {
+            a: 'Bogotá',
+            b: 'Santiago',
+            c: 'Lima',
+            d: 'Buenos Aires'
+        },
+        correctAnswer: 'b'
     },
     {
-        text: 'Qual o país com a maior população do mundo?',
-        options: ['Índia', 'Estados Unidos', 'China', 'Rússia']
+        question: 'Qual é o nome da primeira mulher a ganhar um Prêmio Nobel?',
+        answers: {
+            a: 'Marie Curie',
+            b: 'Rosalind Franklin',
+            c: 'Ada Lovelace',
+            d: 'Dorothy Hodgkin'
+        },
+        correctAnswer: 'a'
     },
     {
-        text: 'Em que ano ocorreu a queda do Muro de Berlim?',
-        options: ['1985', '1987', '1989', '1991']
+        question:
+            'Qual é o nome do famoso quadro de Leonardo da Vinci que retrata uma mulher sorrindo?',
+        answers: {
+            a: 'A Última Ceia',
+            b: 'A Criação de Adão',
+            c: 'Mona Lisa',
+            d: 'A Noite Estrelada'
+        },
+        correctAnswer: 'c'
     },
     {
-        text: 'Qual a moeda oficial do Japão?',
-        options: ['Iene', 'Yuan', 'Won', 'Rúpia']
+        question:
+            'Qual é o nome da famosa estação espacial que orbita a Terra?',
+        answers: {
+            a: 'ISS',
+            b: 'Soyuz',
+            c: 'Chandrayaan-1',
+            d: 'Hubble'
+        },
+        correctAnswer: 'a'
     },
     {
-        text: 'Qual o país que tem o maior número de Patrimônios Mundiais da UNESCO?',
-        options: ['China', 'Itália', 'Espanha', 'França']
+        question: "Qual é o nome do autor do livro 'O Pequeno Príncipe'?",
+        answers: {
+            a: 'Antoine de Saint-Exupéry',
+            b: 'Marcel Proust',
+            c: 'Gustave Flaubert',
+            d: 'Victor Hugo'
+        },
+        correctAnswer: 'a'
     },
     {
-        text: 'Quem é considerado o maior cientista da história?',
-        options: [
-            'Albert Einstein',
-            'Isaac Newton',
-            'Galileu Galilei',
-            'Charles Darwin'
-        ]
+        question:
+            'Qual é o nome do principal escritor brasileiro da literatura de cordel?',
+        answers: {
+            a: 'Machado de Assis',
+            b: 'Ariano Suassuna',
+            c: 'Patativa do Assaré',
+            d: 'Guimarães Rosa'
+        },
+        correctAnswer: 'c'
     },
     {
-        text: 'Qual o país com maior número de ilhas no mundo?',
-        options: [
-            'Indonésia',
-            'Pastor Alemão',
-            'Fila Brasileiro',
-            'São Bernardo'
-        ]
+        question: 'Qual é o nome do maior desfiladeiro do mundo?',
+        answers: {
+            a: 'Grand Canyon',
+            b: 'Cânion do Xingó',
+            c: 'Cânion do Itaimbezinho',
+            d: 'Cânion de Colca'
+        },
+        correctAnswer: 'a'
     },
     {
-        text: '',
-        options: ['Chiuaua', 'Pastor Alemão', 'Fila Brasileiro', 'São Bernardo']
+        question:
+            "Qual é o nome do personagem principal do livro '1984', de George Orwell?",
+        answers: {
+            a: 'Winston Smith',
+            b: 'John Savage',
+            c: 'Guy Montag',
+            d: 'David Bowman'
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: 'Qual é o nome do primeiro satélite artificial da Terra?',
+        answers: {
+            a: 'Sputnik 1',
+            b: 'Explorer 1',
+            c: 'Telstar 1',
+            d: 'Apollo 11'
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: 'Qual é o maior deserto do mundo?',
+        answers: {
+            a: 'Deserto de Gobi',
+            b: 'Deserto do Saara',
+            c: 'Deserto da Patagônia',
+            d: 'Deserto do Atacama'
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question:
+            'Qual é o nome da primeira mulher a ser eleita presidente do Brasil?',
+        answers: {
+            a: 'Dilma Rousseff',
+            b: 'Marina Silva',
+            c: 'Jair Bolsonaro mudar isso kkkkkkk',
+            d: 'Luiza Erundina'
+        },
+        correctAnswer: 'a'
     }
 ];
