@@ -6,7 +6,7 @@ import NoSSR from 'components/NoSSR';
 const Aprendizado: NextPage = () => {
     return (
         <NoSSR>
-            <GameTemplate routeName="aprendizado" timeout={10} />
+            <GameTemplate routeName="aprendizado" timeout={20} />
         </NoSSR>
     );
 };

@@ -140,7 +140,7 @@ export const questions: IQuestion[] = [
         answers: {
             a: 'Dilma Rousseff',
             b: 'Marina Silva',
-            c: 'Jair Bolsonaro mudar isso kkkkkkk',
+            c: 'Tabata Amaral',
             d: 'Luiza Erundina'
         },
         correctAnswer: 'a'
