@@ -1,26 +1,26 @@
 import Option from 'components/Option';
+import { IQuestion } from 'utils/questions';
 import * as S from './styles';
 
 interface QuestionSetProps {
-    question: {
-        text: string;
-        options: string[];
-    };
+    q: IQuestion;
     number: string;
 }
 
-export const QuestionSet: React.FC<QuestionSetProps> = ({
-    question,
-    number
-}) => {
+export const QuestionSet: React.FC<QuestionSetProps> = ({ q, number }) => {
+    console.log(q);
     return (
-        <S.Wrapper>
-            <S.Text>{number}</S.Text>
-            <S.Text>{question.text}</S.Text>
-            <Option op="a" label={question.options[0]} />
-            <Option op="b" label={question.options[1]} />
-            <Option op="c" label={question.options[2]} />
-            <Option op="d" label={question.options[3]} />
-        </S.Wrapper>
+        <>
+            {q && q.answers && (
+                <S.Wrapper>
+                    <S.Text>{number}</S.Text>
+                    <S.Text>{q.question}</S.Text>
+                    <Option op="a" label={q.answers.a} />
+                    <Option op="b" label={q.answers.b} />
+                    <Option op="c" label={q.answers.c} />
+                    <Option op="d" label={q.answers.d} />
+                </S.Wrapper>
+            )}
+        </>
     );
 };

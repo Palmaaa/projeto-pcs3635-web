@@ -16,7 +16,6 @@ const Home: NextPage = () => {
     const { push } = useRouter();
     const { connectionStatus } = useMqttState();
     const { message: menu } = useSubscription('menu');
-
     console.log(connectionStatus);
 
     if (!menu) {
