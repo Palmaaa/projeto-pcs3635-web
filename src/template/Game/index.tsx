@@ -35,7 +35,7 @@ const GameTemplate: React.FC<GameProps> = ({ routeName, timeout }) => {
     });
 
     useEffect(() => {
-        if (acertou?.message === '1' && Number(id) < 9) {
+        if (acertou?.message === '1' && Number(id) < 10) {
             router.push(`/${routeName}/${Number(id) + 1}`);
             const t = new Date();
             t.setSeconds(t.getSeconds() + timeout);
