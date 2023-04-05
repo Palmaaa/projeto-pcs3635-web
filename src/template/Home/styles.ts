@@ -25,3 +25,11 @@ export const ModesTitle = styled.h2`
 export const OptionsWrapper = styled.div`
     display: flex;
 `;
+
+export const Stats = styled.a`
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+    margin-top: 80px;
+    cursor: pointer;
+`;

@@ -6,7 +6,5 @@ export const getRandomQuestion = (sortedIds: number[]) => {
         id = Math.floor(Math.random() * questions.length);
     } while (sortedIds.includes(id));
 
-    console.log(sortedIds);
-
     return { q: questions[id], x: id };
 };

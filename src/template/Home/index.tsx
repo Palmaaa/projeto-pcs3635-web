@@ -4,7 +4,7 @@ import * as S from './styles';
 
 const HomeTemplate = () => (
     <S.Container>
-        <S.Title>SHOW DO 2¹⁰ MIL</S.Title>
+        <S.Title>Fast Trivia</S.Title>
         <S.ModesTitle>MODOS DE JOGO</S.ModesTitle>
         <S.OptionsWrapper>
             <Option op="a" label="aprendizado" menu />
@@ -12,6 +12,7 @@ const HomeTemplate = () => (
             <Option op="c" label="normal" menu />
             <Option op="d" label="velocidade" menu />
         </S.OptionsWrapper>
+        <S.Stats href="/historico">histórico</S.Stats>
     </S.Container>
 );
 

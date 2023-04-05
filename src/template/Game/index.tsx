@@ -35,7 +35,7 @@ const GameTemplate: React.FC<GameProps> = ({ routeName, timeout }) => {
     });
 
     useEffect(() => {
-        if (acertou?.message === '1' && Number(id) < 10) {
+        if (acertou?.message === '1' && Number(id) < 9) {
             router.push(`/${routeName}/${Number(id) + 1}`);
             const t = new Date();
             t.setSeconds(t.getSeconds() + timeout);
@@ -57,31 +57,29 @@ const GameTemplate: React.FC<GameProps> = ({ routeName, timeout }) => {
     }, [id]);
 
     if (perdeu?.message === '1') {
-        router.push(`/perdeu?p=${id}`);
+        const data = btoa(
+            JSON.stringify({
+                gameMode: routeName,
+                timeError: seconds,
+                questionError: question.question
+            })
+        );
+        router.push(`/perdeu?p=${id}&data=${data}`);
     }
 
     if (ganhou?.message === '1') {
-        router.push('/ganhou');
+        router.push(`/ganhou?mode=${routeName}`);
     }
 
     return (
         <S.Container>
-            <h1>SHOW DO 2¹⁰ MIL</h1>
+            <h1>Fast Trivia</h1>
             <S.Content>
                 {id && question && (
                     <QuestionSet number={String(id)} q={question} />
                 )}
                 <S.Side>
-                    <p>
-                        Prêmio atual: R${' '}
-                        {Number(id) > 0 ? (
-                            <>
-                                2<sup>{id}</sup> mil
-                            </>
-                        ) : (
-                            id
-                        )}
-                    </p>
+                    <p>Pontos: {id}</p>
                     <p>Tempo: {seconds} s</p>
                 </S.Side>
             </S.Content>

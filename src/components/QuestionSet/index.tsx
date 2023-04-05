@@ -8,12 +8,11 @@ interface QuestionSetProps {
 }
 
 export const QuestionSet: React.FC<QuestionSetProps> = ({ q, number }) => {
-    console.log(q);
     return (
         <>
             {q && q.answers && (
                 <S.Wrapper>
-                    <S.Text>{number}</S.Text>
+                    <S.Text>{Number(number) + 1}</S.Text>
                     <S.Text>{q.question}</S.Text>
                     <Option op="a" label={q.answers.a} />
                     <Option op="b" label={q.answers.b} />
