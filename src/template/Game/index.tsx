@@ -60,7 +60,7 @@ const GameTemplate: React.FC<GameProps> = ({ routeName, timeout }) => {
         const data = btoa(
             JSON.stringify({
                 gameMode: routeName,
-                timeError: seconds,
+                timeError: `${seconds} s`,
                 questionError: question.question
             })
         );
