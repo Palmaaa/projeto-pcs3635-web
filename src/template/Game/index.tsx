@@ -19,11 +19,13 @@ const GameTemplate: React.FC<GameProps> = ({ routeName, timeout }) => {
 
     const [question, setQuestion] = useState<IQuestion>({} as IQuestion);
     const [sortedIds, setSortedIds] = useState<number[]>([]);
+    const [pressedOptions, setPressedOptions] = useState<string[]>([]);
     const { client } = useMqttState();
 
     const { message: acertou } = useSubscription('acertou');
     const { message: perdeu } = useSubscription('perdeu');
     const { message: ganhou } = useSubscription('ganhou');
+    const { message: alternativa } = useSubscription('alternativa');
 
     const time = new Date();
     time.setSeconds(time.getSeconds() + timeout);
@@ -43,6 +45,11 @@ const GameTemplate: React.FC<GameProps> = ({ routeName, timeout }) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [acertou]);
+
+    useEffect(() => {
+        setPressedOptions((op) => [...op, alternativa?.message as string]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [alternativa]);
 
     useEffect(() => {
         if (sorted) {
@@ -76,7 +83,11 @@ const GameTemplate: React.FC<GameProps> = ({ routeName, timeout }) => {
             <h1>Fast Trivia</h1>
             <S.Content>
                 {id && question && (
-                    <QuestionSet number={String(id)} q={question} />
+                    <QuestionSet
+                        number={String(id)}
+                        q={question}
+                        pressedOptions={pressedOptions}
+                    />
                 )}
                 <S.Side>
                     <p>Pontos: {id}</p>
