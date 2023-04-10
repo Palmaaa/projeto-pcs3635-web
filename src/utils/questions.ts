@@ -43,12 +43,12 @@ export const questions: IQuestion[] = [
     {
         question: 'Qual é o nome da primeira mulher a ganhar um Prêmio Nobel?',
         answers: {
-            a: 'Marie Curie',
-            b: 'Rosalind Franklin',
+            b: 'Marie Curie',
+            a: 'Rosalind Franklin',
             c: 'Ada Lovelace',
             d: 'Dorothy Hodgkin'
         },
-        correctAnswer: 'a'
+        correctAnswer: 'b'
     },
     {
         question:
@@ -96,12 +96,12 @@ export const questions: IQuestion[] = [
     {
         question: 'Qual é o nome do maior desfiladeiro do mundo?',
         answers: {
-            a: 'Grand Canyon',
+            d: 'Grand Canyon',
             b: 'Cânion do Xingó',
             c: 'Cânion do Itaimbezinho',
-            d: 'Cânion de Colca'
+            a: 'Cânion de Colca'
         },
-        correctAnswer: 'a'
+        correctAnswer: 'd'
     },
     {
         question:
@@ -138,11 +138,82 @@ export const questions: IQuestion[] = [
         question:
             'Qual é o nome da primeira mulher a ser eleita presidente do Brasil?',
         answers: {
-            a: 'Dilma Rousseff',
-            b: 'Marina Silva',
-            c: 'Tabata Amaral',
+            c: 'Dilma Rousseff',
+            a: 'Marina Silva',
+            b: 'Tabata Amaral',
             d: 'Luiza Erundina'
         },
+        correctAnswer: 'c'
+    },
+    {
+        question: 'Qual é a capital do Brasil?',
+        answers: {
+            a: 'São Paulo',
+            b: 'Rio de Janeiro',
+            c: 'Brasília',
+            d: 'Salvador'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: 'Qual é o nome da maior cordilheira do mundo?',
+        answers: {
+            a: 'Montanhas Rochosas',
+            b: 'Cordilheira dos Andes',
+            c: 'Himalaias',
+            d: 'Cordilheira dos Alpes'
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question: 'Qual é o maior planeta do sistema solar?',
+        answers: {
+            a: 'Júpiter',
+            b: 'Saturno',
+            c: 'Netuno',
+            d: 'Urano'
+        },
         correctAnswer: 'a'
+    },
+    {
+        question: 'Qual é o menor país do mundo em área territorial?',
+        answers: {
+            a: 'Mônaco',
+            b: 'Vaticano',
+            c: 'San Marino',
+            d: 'Andorra'
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question: 'Qual é a montanha mais alta do mundo?',
+        answers: {
+            a: 'Monte Everest',
+            b: 'Monte Kilimanjaro',
+            c: 'Monte Aconcágua',
+            d: 'Monte Denali'
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "Quem é o autor da obra 'Dom Casmurro'?",
+        answers: {
+            a: 'Machado de Assis',
+            b: 'Carlos Drummond de Andrade',
+            c: 'Cecília Meireles',
+            d: 'Clarice Lispector'
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question:
+            'Qual é o nome do navegador português que descobriu o caminho marítimo para as Índias?',
+        answers: {
+            a: 'Cristóvão Colombo',
+            b: 'Vasco da Gama',
+            c: 'Fernão de Magalhães',
+            d: 'Pedro Álvares Cabral'
+        },
+        correctAnswer: 'b'
     }
 ];
